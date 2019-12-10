@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="sceipt.js"></script>
+</head>
+
+<body>
+
+    <div id="clock" class="clock" onload="showTime()">
+        <script>
+            function showTime() {
+                var date = new Date();
+                var h = date.getHours(); // 0 - 23
+                var m = date.getMinutes(); // 0 - 59
+                var s = date.getSeconds(); // 0 - 59
+                var session = "AM";
+
+                if (h == 0) {
+                    h = 12;
+                }
+
+                if (h > 12) {
+                    h = h - 12;
+                    session = "PM";
+                }
+
+                h = (h < 10) ? "0" + h : h;
+                m = (m < 10) ? "0" + m : m;
+                s = (s < 10) ? "0" + s : s;
+
+                var time = h + ":" + m + ":" + s + " " + session;
+                document.getElementById("clock").innerText = time;
+                document.getElementById("clock").textContent = time;
+
+                setTimeout(showTime, 1000);
+
+            }
+
+            showTime();
+        </script>
+    </div>
+
+
+    <div id="this">
+        <div id="bad">
+            <img src="image/red.gif" alt="" id="firework01">
+            <img src="image/white.gif" alt="" id="firework02">
+            <img src="image/purple.gif" alt="" id="firework03">
+        </div>
+    </div>
+
+
+    <div class="slider">
+
+
+
+        <div class="slides">
+
+
+            <div id="slide-1">
+                <!-- Welcome to Yokohama Fireworks Festival -->
+            </div>
+            <div id="slide-2">
+                <!-- Heart Beats -->
+            </div>
+            <div id="slide-3">
+                <!-- The Startlit Sky -->
+            </div>
+            <div id="slide-4">
+                <!-- Wings of Hope -->
+            </div>
+            <div id="slide-5">
+                <!-- Welcome to The World of Wa -->
+            </div>
+            <div id="slide-6">
+                <!-- Celebration of Reiwa -->
+            </div>
+            <div id="slide-7">
+                <!-- Poem of Summer -->
+            </div>
+            <div id="slide-8">
+                <!-- Eternal Glitter -->
+            </div>
+            <div id="slide-9">
+                <!-- Wish Upon a Star -->
+            </div>
+            <div id="slide-10">
+                <!-- Starlight Illusion -->
+            </div>
+            <div id="slide-11">
+                <!-- Space Battleship YAMATO -->
+            </div>
+            <div id="slide-12">
+                <!-- Water Fairy & Light Fairy -->
+            </div>
+
+            <!-- <div id="buildings"></div> -->
+
+
+        </div>
+
+        <a id="s1" href="#slide-1"></a>
+        <a id="s2" href="#slide-2"></a>
+        <a id="s3" href="#slide-3"></a>
+        <a id="s4" href="#slide-4"></a>
+        <a id="s5" href="#slide-5"></a>
+        <a id="s6" href="#slide-6"></a>
+        <a id="s7" href="#slide-7"></a>
+        <a id="s8" href="#slide-8"></a>
+        <a id="s9" href="#slide-9"></a>
+        <a id="s10" href="#slide-10"></a>
+        <a id="s11" href="#slide-11"></a>
+        <a id="s12" href="#slide-12"></a>
+
+
+
+    </div>
+
+
+    <div id="oh">
+        <div id="yokohama">
+            <img src="image/yokohama_landscape.svg" alt="" id="building">
+        </div>
+
+    </div>
+
+    <div id="hallo">
+        <h1>FIREWORKS INFORMATION</h1>
+        <h2>Welcome to Yokohama Fireworks Festival (19:05 ~ 19:11)</h2>
+        <p>
+            This firework will greet everyone who came to the fireworks festival. There will be 70 fireworks that will be luanched in total. At the very end. It will give a huge impact to all of the audience, proving that this festival will not give a moment to bore.
+        </p>
+
+        <h3>
+            Contributor: Asahi Newspaper Creator: Hajime Hashimoto
+        </h3>
+    </div>
+
+</body>
+
+</html>

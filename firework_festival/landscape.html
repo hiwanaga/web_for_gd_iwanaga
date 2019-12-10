@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>aaaaa</title>
+    <style>
+        body {
+            background: black;
+        }
+        
+        #yokohama {
+            position: absolute;
+            z-index: 20;
+        }
+        
+        img {
+            position: fixed;
+        }
+        
+        #fire {
+            position: fixed;
+            margin-top: 3%;
+            margin-right: 25%;
+            z-index: 10;
+            text-align: center;
+            width: 100vw;
+        }
+        
+        .clock {
+            color: white;
+            font-size: 50px;
+            letter-spacing: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #hallo {
+            position: absolute;
+            border: 2px solid white;
+            padding: 2% 5%;
+            border-radius: 20px;
+        }
+        
+        h1 {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        
+        h2 {
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        
+        p {
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        
+        h3 {
+            font-size: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="fire">
+        <img src="image/red.gif" alt="" id="firework01">
+        <img src="image/white.gif" alt="" id="firework02">
+        <img src="image/purple.gif" alt="" id="firework03">
+    </div>
+    <div>
+        <div id="yokohama">
+            <img src="image/yokohama_landscape.svg" alt="" id="building">
+        </div>
+    </div>
+
+
+    <div id="clock" class="clock" onload="showTime()">
+        <script>
+            function showTime() {
+                var date = new Date();
+                var h = date.getHours(); // 0 - 23
+                var m = date.getMinutes(); // 0 - 59
+                var s = date.getSeconds(); // 0 - 59
+                var session = "AM";
+
+                if (h == 0) {
+                    h = 12;
+                }
+
+                if (h > 12) {
+                    h = h - 12;
+                    session = "PM";
+                }
+
+                h = (h < 10) ? "0" + h : h;
+                m = (m < 10) ? "0" + m : m;
+                s = (s < 10) ? "0" + s : s;
+
+                var time = h + ":" + m + ":" + s + " " + session;
+                document.getElementById("clock").innerText = time;
+                document.getElementById("clock").textContent = time;
+
+                setTimeout(showTime, 1000);
+
+            }
+
+            showTime();
+        </script>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap');
+body {
+    margin: 5% 20% 20% 20%;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+a:link {
+    text-decoration: none;
+    text-decoration: none;
+    color: darkgray;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0px 0px 0px 0px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.beginning {
+    margin-bottom: 100px;
+}
+
+.para {
+    margin: -5px 0px 75px 0px;
+    font-size: 16px;
+    color: grey;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+ul {
+    margin-left: -25px;
+}
+
+.interviewMenu {
+    height: 100vh;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.designerList {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.interviewContent {
+    height: 100%;
+    margin-bottom: 20%;
+}
+
+.designerName {
+    font-size: 24px;
+    padding-top: 20px;
+    margin-bottom: 25px;
+}
+
+.carsonImages {
+    margin: -1000px 0px, 75px 0px;
+    text-align: center;
+}

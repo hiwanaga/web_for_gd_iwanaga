@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yokohama Fireworks Summer Festival 2019</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="timeline.css" />
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="timeline-min.js"></script>
+</head>
+
+<body>
+    <div id="mainSection">
+        <div id="visual">
+            <div id="fireworkAnimation">
+                <img src="image/red.gif" alt="" id="firework01">
+                <img src="image/white.gif" alt="" id="firework02">
+                <img src="image/purple.gif" alt="" id="firework03">
+            </div>
+            <div id="yokohamaLandscape">
+                <img src="image/yokohama_landscape.svg" alt="" id="building">
+            </div>
+        </div>
+        <div id="timeline">
+
+            <div class="timeline-container timeline-theme-1">
+                <div class="timeline js-timeline">
+                    <div data-time="2017">
+                        your content or markup
+                    </div>
+                    <div data-time="2016">
+                        your content or markup
+                    </div>
+                    <div data-time="2015">
+                        your content or markup
+                    </div>
+                    <div data-time="2014">
+                        your content or markup
+                    </div>
+                    <div data-time="2013">
+                        your content or markup
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.js-timeline').Timeline();
+    </script>
+</body>
+
+</html>

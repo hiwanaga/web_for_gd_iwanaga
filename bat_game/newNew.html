@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px 0px;
+            padding: 0px 0px;
+            height: 100%;
+            width: 100%
+        }
+        
+        #wrapper {
+            /*
+            width: 2000px;
+            height: 100%;
+            transform: rotate(-90deg);
+            transform-origin: right top;
+            */
+            width: 400vw;
+            height: 100vh;
+            background-size: contain;
+            background-repeat: repeat;
+            background-image: url("image/cover.png");
+        }
+        
+        #landingPage {
+            /* width: 2000px;
+            height: 1000px;
+            background-color: lightcoral;
+            transform: rotate(90deg);
+            transform-origin: right top;
+            margin: 0px 0px;
+            */
+            width: 200vw;
+            height: 100vh;
+            background-image: url('cover.png');
+            display: inline-block;
+            float: left;
+        }
+        
+        #placard {
+            width: 100%;
+            height: 100%;
+            padding: 100px;
+            margin: 600px 20px;
+            transform: rotate(5deg);
+        }
+        
+        #sign {
+            width: 500px;
+            height: 250px;
+            background-image: url(image/wood-texture.jpg);
+            margin: -10px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        h1 {
+            padding: 25px 20px 0;
+            color: whitesmoke;
+            font-size: 45px;
+            line-height: 45px;
+        }
+        
+        p {
+            padding: 0px 20px 0px 20px;
+            margin-top: -25px;
+            color: whitesmoke;
+        }
+        
+        #arrow {
+            font-size: 100px;
+            text-decoration: none;
+            position: absolute;
+            left: 375px;
+            top: 160px;
+            color: whitesmoke;
+        }
+        
+        #pole {
+            width: 50px;
+            height: 500px;
+            background-image: url(image/wood-texture.jpg);
+            margin: -325px 12.5%;
+            position: relative;
+            z-index: 1;
+        }
+        
+        #gamePage {
+            /* width: 2000px;
+            height: 1000px;
+            background-color: lightskyblue;
+            transform: rotate(90deg);
+            transform-origin: right top;
+            margin: 0px 0px;
+            */
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            float: right;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "#gamePage") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="landingPage">
+            <div id="placard">
+                <div id="sign">
+                    <h1>WELCOME! <br> My fellow bats</h1>
+                    <p>From here, you will be entering into a deep dark cave, where there are rocks sticking from all over the places. So be care, use your supersonic to sense the rock and avoid them by screaming louder or quiter to fly. Otherwise, you'll
+                        crash and get hurt. If you're ready, follow the arrow below and explore the unknown cave.</p>
+                    <a href="#gamePage" id="arrow">&#8594;</a>
+                </div>
+                <div id="pole"></div>
+            </div>
+        </div>
+        <div id="gamePage">
+            <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+            <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+            <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+            <script language="javascript" type="text/javascript" src="sketch.js"></script>
+            <script language="javascript" type="text/javascript" src="bird.js"></script>
+            <script language="javascript" type="text/javascript" src="pipe.js"></script>
+        </div>
+    </div>
+
+</body>
+
+</html>

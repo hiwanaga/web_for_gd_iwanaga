@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .body {}
+        
+        .container3 {
+            display: inline-block;
+            margin: 100px 100px 100px 100px;
+            padding: 0px;
+            width: 500px;
+            height: 500px;
+            position: relative;
+            text-align: center;
+        }
+        
+        .no7 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            width: 400px;
+            height: 400px;
+            border-radius: 100%;
+            background-color: aqua;
+            mix-blend-mode: multiply;
+            transition: linear 1s;
+            transform-origin: top left;
+        }
+        
+        .no7:hover {}
+        
+        .container3:hover .no7 {
+            transform: scale(0.5);
+        }
+        
+        .container3:hover .no8 {
+            transform: scale(2);
+        }
+        
+        .no8 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-100%-0%);
+            width: 200px;
+            height: 200px;
+            background-color: firebrick;
+            mix-blend-mode: multiply;
+            transition: linear 1s;
+            transform-origin: right bottom;
+        }
+        
+        .no8:hover {}
+        
+        .container4 {
+            display: inline-block;
+            margin: 100px 100px 100px 100px;
+            padding: 0px;
+            width: 500px;
+            height: 500px;
+            position: relative;
+            text-align: center;
+            background-color: white;
+        }
+        
+        .container4:hover {
+            transform-origin: center;
+            transition: all 4s;
+            transition-timing-function: ease-in-out;
+            transform: rotate(3600deg);
+        }
+        
+        .no9 {
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            border: 25px solid;
+            border-color: black black black transparent;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            transform: rotate(135deg);
+        }
+        
+        .no10 {
+            width: 150px;
+            height: 150px;
+            border: 25px solid;
+            border-color: black black transparent transparent;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .container5 {
+            display: inline-block;
+            margin: 100px 100px 100px 100px;
+            padding: 0px;
+            width: 500px;
+            height: 500px;
+            background-color: white;
+            position: relative;
+            transition: all 1s;
+            transform-origin: bottom right;
+        }
+        
+        .no11 {
+            display: inline-block;
+            margin: auto;
+            width: 200px;
+            height: 220px;
+            border: 10px solid;
+            border-color: black transparent black transparent;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .no12 {
+            display: inline-block;
+            margin: auto;
+            width: 220px;
+            height: 200px;
+            border: 10px solid;
+            border-color: transparent transparent transparent black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .no13 {
+            display: inline-block;
+            margin: 50px auto;
+            width: 220px;
+            height: 100px;
+            border: 10px solid;
+            border-color: transparent black transparent transparent;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .no14 {
+            display: inline-block;
+            margin: 100px auto 0px 50px;
+            width: 100px;
+            height: 220px;
+            border: 10px solid;
+            border-color: black transparent transparent transparent;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            /* this is the right side of the g*/
+            transition: linear 1s;
+            transform-origin: right;
+        }
+        
+        .container5:hover {
+            transform: rotate(180deg);
+        }
+        
+        .container5:hover .no14 {
+            width: 260px;
+        }
+        
+        .g-top {
+            margin: -100px auto 0px auto;
+        }
+        
+        .g-left {
+            margin: -210px 0px 0px -85px;
+        }
+        
+        .g-right {
+            margin: -222.5px 10px 0px 0px;
+        }
+        
+        .g-slash {
+            margin: 0px 0px 0px 0px;
+        }
+        
+        .g-bottom {
+            margin: 0px auto 0px auto;
+        }
+        
+        .container6 {
+            display: inline-block;
+            margin: 100px 100px 100px 100px;
+            padding: 0px;
+            width: 500px;
+            height: 500px;
+            background-color: white(68, 39, 39);
+            position: relative;
+        }
+        
+        .no21 {
+            display: inline-block;
+            width: 100px;
+            height: 400px;
+            border-radius: 400px 0px 0px 400px;
+            background-color: black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-200%, -50%);
+        }
+        
+        .top-right-shape {
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .no22 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-25%, -200%);
+        }
+        
+        .no23 {
+            display: inline-block;
+            width: 101px;
+            height: 100px;
+            background: white;
+            border-radius: 0 100px 0 0;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-25%, -200%);
+        }
+        
+        .bottom-right-shape {
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .no24 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-25%, 100%);
+            z-index: 5;
+        }
+        
+        .no25 {
+            display: inline-block;
+            width: 101px;
+            height: 100px;
+            background: white;
+            border-radius: 0 0 100px 0;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-25%, 100%);
+            z-index: 10;
+        }
+        
+        .hige {}
+        
+        .no26 {
+            display: inline-block;
+            width: 175px;
+            height: 50px;
+            background-color: black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(12.5%, 100%);
+        }
+        
+        .no27 {
+            display: inline-block;
+            width: 175px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50px 50px 0 0;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(12.5%, 100%);
+        }
+        
+        .no28 {
+            display: inline-block;
+            width: 75px;
+            height: 200px;
+            background-color: black;
+            border-radius: 0 0px 0px 75px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(95%, 25%);
+            transition: linear 1s;
+            transform-origin: center;
+        }
+        
+        .container6:hover .no28 {
+            height: 375px;
+            transform: translateX(150px);
+            transform: rotateY(180deg);
+        }
+        
+        .container7 {
+            display: inline-block;
+            margin: 100px 100px 100px 100px;
+            padding: 0px;
+            width: 500px;
+            height: 500px;
+            position: relative;
+            text-align: center;
+            background-color: white;
+        }
+        
+        .container7:hover .lg-l {
+            display: block;
+        }
+        
+        .container7:hover .lg-rite-dot {
+            display: block;
+        }
+        
+        .no29 {
+            width: 500px;
+            height: 500px;
+            border-radius: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: black;
+        }
+        
+        .no30 {
+            width: 150px;
+            height: 50px;
+            position: absolute;
+            background-color: white;
+            margin: 250px 0px 0px 350px;
+        }
+        
+        .lg-l {
+            position: absolute;
+            width: 100px;
+            height: 250px;
+            border: solid 25px;
+            border-color: transparent transparent white white;
+            transform: translate(150%, 25%);
+            display: none;
+            transition: ease-in-out 2s;
+        }
+        
+        .lg-rite-dot {
+            position: absolute;
+            transform: translate(225%, 350%);
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 100%;
+            display: none;
+            transition: ease-in-out 4s;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container1">
+        <div class="no1"></div>
+        <div class="no2"></div>
+    </div>
+
+    <div class="container2">
+        <div class="no3"></div>
+        <div class="no4"></div>
+        <div class="no5"></div>
+        <div class="no6"></div>
+    </div>
+
+    <div class="container3">
+        <div class="no7"></div>
+        <div class="no8"></div>
+    </div>
+
+    <div class="container4">
+        <div class="container4-1">
+            <div class="no9"></div>
+            <div class="no10"></div>
+        </div>
+    </div>
+
+    <div class="container5">
+        <div class="g-top">
+            <div class="no11"></div>
+            <div class="no12"></div>
+            <div class="no13"></div>
+            <div class="no14"></div>
+        </div>
+    </div>
+
+    <div class="container6">
+        <div class="no21"></div>
+        <div class="top-right-shape">
+            <div class="no22"></div>
+            <div class="no23"></div>
+        </div>
+
+        <div class="bottom-right-shape">
+            <div class="no24"></div>
+            <div class="no25"></div>
+        </div>
+
+        <div class="hige">
+            <div class="no26"></div>
+            <div class="no27"></div>
+            <div class="no28"></div>
+        </div>
+
+    </div>
+
+    <div class="container7">
+        <div class="no29"></div>
+        <div class="no30"></div>
+        <div class="no31"></div>
+        <div class="lg-l"></div>
+        <div class="lg-rite-dot"></div>
+        <div class="lg-left-dot"></div>
+    </div>
+</body>
+
+
+
+</html>
+<!-- .container1 { display: inline-block; margin: 100px 100px 100px 100px; padding: 0px; width: 500px; height: 500px; background-color: lightcoral; position: relative; } .no1 { width: 200px; height: 200px; background-color: aquamarine; margin: auto; top: 50%;
+left: 50%; transform: translate(0%); } .no2 { width: 100px; height: 100px; background-color: darkgreen; margin: 0; top: 50%; left: 50%; transform: translate(-50%, -50%); } .container2 { display: inline-block; margin: 100px 100px 100px 100px; padding:
+0px; width: 500px; height: 500px; background-color: lightcoral; position: relative; text-align: center; } .no3 { margin: 0px auto -10px auto; display: inline-block; height: 50px; border-left: 25px solid black; } .no4 { margin: 0px auto 0px auto; width:
+150px; height: 150px; border-radius: 50%; border: 25px solid black; } .no5 { margin: auto; display: inline-block; height: 50px; border-left: 25px solid black; margin-top: -10px; } .no6 { margin: -10px auto 0px auto; width: 150px; height: 150px; border-radius:
+50%; border: 25px solid black; } -->
